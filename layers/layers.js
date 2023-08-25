@@ -2,7 +2,7 @@ var wms_layers = [];
 
 
         var lyr_GoogleMaps_0 = new ol.layer.Tile({
-            'title': 'Google Maps',
+            'title': 'Hintergrundkarte',
             'type': 'base',
             'opacity': 1.000000,
             
@@ -22,7 +22,7 @@ var lyr_WarngebietedesDWDaufKreisbasis_1 = new ol.layer.Tile({
                                 "VERSION": "1.1.1"},
                             })),
                             title: "Warngebiete des DWD auf Kreisbasis",
-                            opacity: 1.000000,
+                            opacity: 0.5,
                             
                             
                           });
@@ -37,7 +37,7 @@ var lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2 = new ol.layer.T
                                 "VERSION": "1.1.1"},
                             })),
                             title: "Wetterwarnungen und Vorabinformationen auf Landkreisebene",
-                            opacity: 1.000000,
+                            opacity: 0.75,
                             
                             
                           });
@@ -66,8 +66,8 @@ var lyr_Autowarn_Analyse_5 = new ol.layer.Tile({
                                 "TILED": "true",
                                 "VERSION": "1.1.1"},
                             })),
-                            title: "Autowarn_Analyse",
-                            opacity: 1.000000,
+                            title: "Automatische Gewittererkennung",
+                            opacity: 0.75,
                             
                             
                           });
@@ -81,12 +81,12 @@ var lyr_Autowarn_Vorhersage_6 = new ol.layer.Tile({
                                 "TILED": "true",
                                 "VERSION": "1.1.1"},
                             })),
-                            title: "Autowarn_Vorhersage",
-                            opacity: 1.000000,
+                            title: "Autimatische Gewittervorhersage",
+                            opacity: 0.75,
                             
                             
                           });
               wms_layers.push([lyr_Autowarn_Vorhersage_6, 1]);
 
-lyr_GoogleMaps_0.setVisible(true);lyr_WarngebietedesDWDaufKreisbasis_1.setVisible(true);lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2.setVisible(true);lyr_Niederschlagsradar_3.setVisible(true);lyr_Autowarn_Analyse_5.setVisible(true);lyr_Autowarn_Vorhersage_6.setVisible(true);
+lyr_GoogleMaps_0.setVisible(true);lyr_WarngebietedesDWDaufKreisbasis_1.setVisible(false);lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2.setVisible(true);lyr_Niederschlagsradar_3.setVisible(true);lyr_Autowarn_Analyse_5.setVisible(true);lyr_Autowarn_Vorhersage_6.setVisible(true);
 var layersList = [lyr_GoogleMaps_0,lyr_WarngebietedesDWDaufKreisbasis_1,lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2,lyr_Niederschlagsradar_3,lyr_Autowarn_Analyse_5,lyr_Autowarn_Vorhersage_6];
