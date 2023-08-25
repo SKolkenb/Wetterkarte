@@ -1,0 +1,107 @@
+var wms_layers = [];
+
+
+        var lyr_GoogleMaps_0 = new ol.layer.Tile({
+            'title': 'Google Maps',
+            'type': 'base',
+            'opacity': 1.000000,
+            
+            
+            source: new ol.source.XYZ({
+    attributions: ' ',
+                url: 'https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}'
+            })
+        });
+var lyr_WarngebietedesDWDaufKreisbasis_1 = new ol.layer.Tile({
+                            source: new ol.source.TileWMS(({
+                              url: "https://maps.dwd.de/geoserver/dwd/ows?version%3D1.3%26layers%3Ddwd:Warnungen_Landkreise%26bbox%3D6.15,51.76,14.90,55.01%26width%3D512%26he%0Aight%3D418%26srs%3DEPSG:4326%26CQL_FILTER%3DEC_II%20IN%20('51','%0A52')",
+    attributions: ' ',
+                              params: {
+                                "LAYERS": "Warngebiete_Kreise",
+                                "TILED": "true",
+                                "VERSION": "1.1.1"},
+                            })),
+                            title: "Warngebiete des DWD auf Kreisbasis",
+                            opacity: 1.000000,
+                            
+                            
+                          });
+              wms_layers.push([lyr_WarngebietedesDWDaufKreisbasis_1, 0]);
+var lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2 = new ol.layer.Tile({
+                            source: new ol.source.TileWMS(({
+                              url: "https://maps.dwd.de/geoserver/dwd/ows?version%3D1.3%26layers%3Ddwd:Warnungen_Landkreise%26bbox%3D6.15,51.76,14.90,55.01%26width%3D512%26he%0Aight%3D418%26srs%3DEPSG:4326%26CQL_FILTER%3DEC_II%20IN%20('51','%0A52')",
+    attributions: ' ',
+                              params: {
+                                "LAYERS": "Warnungen_Landkreise",
+                                "TILED": "true",
+                                "VERSION": "1.1.1"},
+                            })),
+                            title: "Wetterwarnungen und Vorabinformationen auf Landkreisebene",
+                            opacity: 1.000000,
+                            
+                            
+                          });
+              wms_layers.push([lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2, 0]);
+var lyr_Niederschlagsradar_3 = new ol.layer.Tile({
+                            source: new ol.source.TileWMS(({
+                              url: "https://maps.dwd.de/geoserver/dwd/ows?version%3D1.3%26layers%3Ddwd:Warnungen_Landkreise%26bbox%3D6.15,51.76,14.90,55.01%26width%3D512%26he%0Aight%3D418%26srs%3DEPSG:4326%26CQL_FILTER%3DEC_II%20IN%20('51','%0A52')",
+    attributions: ' ',
+                              params: {
+                                "LAYERS": "Niederschlagsradar",
+                                "TILED": "true",
+                                "VERSION": "1.1.1"},
+                            })),
+                            title: "Niederschlagsradar",
+                            opacity: 1.000000,
+                            
+                            
+                          });
+              wms_layers.push([lyr_Niederschlagsradar_3, 0]);
+var lyr_RadarkompositmitVorhersageWN_4 = new ol.layer.Tile({
+                            source: new ol.source.TileWMS(({
+                              url: "https://maps.dwd.de/geoserver/dwd/ows?version%3D1.3%26layers%3Ddwd:Warnungen_Landkreise%26bbox%3D6.15,51.76,14.90,55.01%26width%3D512%26he%0Aight%3D418%26srs%3DEPSG:4326%26CQL_FILTER%3DEC_II%20IN%20('51','%0A52')",
+    attributions: ' ',
+                              params: {
+                                "LAYERS": "WN-Produkt",
+                                "TILED": "true",
+                                "VERSION": "1.1.1"},
+                            })),
+                            title: "Radarkomposit mit Vorhersage (WN)",
+                            opacity: 1.000000,
+                            
+                            
+                          });
+              wms_layers.push([lyr_RadarkompositmitVorhersageWN_4, 0]);
+var lyr_Autowarn_Analyse_5 = new ol.layer.Tile({
+                            source: new ol.source.TileWMS(({
+                              url: "https://maps.dwd.de/geoserver/dwd/ows?version%3D1.3%26layers%3Ddwd:Warnungen_Landkreise%26bbox%3D6.15,51.76,14.90,55.01%26width%3D512%26he%0Aight%3D418%26srs%3DEPSG:4326%26CQL_FILTER%3DEC_II%20IN%20('51','%0A52')",
+    attributions: ' ',
+                              params: {
+                                "LAYERS": "Autowarn_Analyse",
+                                "TILED": "true",
+                                "VERSION": "1.1.1"},
+                            })),
+                            title: "Autowarn_Analyse",
+                            opacity: 1.000000,
+                            
+                            
+                          });
+              wms_layers.push([lyr_Autowarn_Analyse_5, 0]);
+var lyr_Autowarn_Vorhersage_6 = new ol.layer.Tile({
+                            source: new ol.source.TileWMS(({
+                              url: "https://maps.dwd.de/geoserver/dwd/ows?version%3D1.3%26layers%3Ddwd:Warnungen_Landkreise%26bbox%3D6.15,51.76,14.90,55.01%26width%3D512%26he%0Aight%3D418%26srs%3DEPSG:4326%26CQL_FILTER%3DEC_II%20IN%20('51','%0A52')",
+    attributions: ' ',
+                              params: {
+                                "LAYERS": "Autowarn_Vorhersage",
+                                "TILED": "true",
+                                "VERSION": "1.1.1"},
+                            })),
+                            title: "Autowarn_Vorhersage",
+                            opacity: 1.000000,
+                            
+                            
+                          });
+              wms_layers.push([lyr_Autowarn_Vorhersage_6, 0]);
+
+lyr_GoogleMaps_0.setVisible(true);lyr_WarngebietedesDWDaufKreisbasis_1.setVisible(true);lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2.setVisible(true);lyr_Niederschlagsradar_3.setVisible(true);lyr_RadarkompositmitVorhersageWN_4.setVisible(true);lyr_Autowarn_Analyse_5.setVisible(true);lyr_Autowarn_Vorhersage_6.setVisible(true);
+var layersList = [lyr_GoogleMaps_0,lyr_WarngebietedesDWDaufKreisbasis_1,lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2,lyr_Niederschlagsradar_3,lyr_RadarkompositmitVorhersageWN_4,lyr_Autowarn_Analyse_5,lyr_Autowarn_Vorhersage_6];
