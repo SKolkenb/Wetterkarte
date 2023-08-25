@@ -1,5 +1,5 @@
 
-isTracking = false;
+isTracking = true;
 var geolocateControl = (function (Control) {
     geolocateControl = function(opt_options) {
         var options = opt_options || {};
