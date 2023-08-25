@@ -103,5 +103,5 @@ var lyr_Autowarn_Vorhersage_6 = new ol.layer.Tile({
                           });
               wms_layers.push([lyr_Autowarn_Vorhersage_6, 1]);
 
-lyr_GoogleMaps_0.setVisible(true);lyr_WarngebietedesDWDaufKreisbasis_1.setVisible(true);lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2.setVisible(true);lyr_Niederschlagsradar_3.setVisible(true);lyr_RadarkompositmitVorhersageWN_4.setVisible(true);lyr_Autowarn_Analyse_5.setVisible(true);lyr_Autowarn_Vorhersage_6.setVisible(true);
+lyr_GoogleMaps_0.setVisible(true);lyr_WarngebietedesDWDaufKreisbasis_1.setVisible(true);lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2.setVisible(true);lyr_Niederschlagsradar_3.setVisible(true);lyr_RadarkompositmitVorhersageWN_4.setVisible(false);lyr_Autowarn_Analyse_5.setVisible(true);lyr_Autowarn_Vorhersage_6.setVisible(true);
 var layersList = [lyr_GoogleMaps_0,lyr_WarngebietedesDWDaufKreisbasis_1,lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2,lyr_Niederschlagsradar_3,lyr_RadarkompositmitVorhersageWN_4,lyr_Autowarn_Analyse_5,lyr_Autowarn_Vorhersage_6];
