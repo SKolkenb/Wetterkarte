@@ -5,9 +5,6 @@ var geolocateControl = (function (Control) {
         var options = opt_options || {};
         var button = document.createElement('button');
         button.className += ' fa fa-map-marker';
-        map.addLayer(geolocateOverlay);
-        map.getView().setCenter(geolocation.getPosition());
-        istracking = true;
         var handleGeolocate = function() {
             if (isTracking) {
                 map.removeLayer(geolocateOverlay);
