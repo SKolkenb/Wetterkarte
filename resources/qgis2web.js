@@ -1,4 +1,5 @@
-
+map.addLayer(geolocateOverlay);
+map.getView().setCenter(geolocation.getPosition());
 isTracking = true;
 var geolocateControl = (function (Control) {
     geolocateControl = function(opt_options) {
