@@ -9,7 +9,7 @@ var wms_layers = [];
             
             source: new ol.source.XYZ({
     attributions: ' ',
-                url: 'https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}'
+                url: 'https://map.eifert-systems.de/{z}/{x}/{y}'
             })
         });
 var lyr_WarngebietedesDWDaufKreisbasis_1 = new ol.layer.Tile({
