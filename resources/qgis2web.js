@@ -15,7 +15,6 @@ var geolocateControl = (function (Control) {
                 isTracking = true;
           }
         };
-        map.getView().setCenter(geolocation.getPosition());
         button.addEventListener('click', handleGeolocate, false);
         button.addEventListener('touchstart', handleGeolocate, false);
         var element = document.createElement('div');
