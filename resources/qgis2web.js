@@ -659,7 +659,6 @@ positionFeature.setStyle(new ol.style.Style({
 }));
 
 geolocation.on('change:position', function() {
-    map.getView().setCenter(geolocation.getPosition());
     var coordinates = geolocation.getPosition();
   positionFeature.setGeometry(coordinates ?
       new ol.geom.Point(coordinates) : null);
