@@ -102,7 +102,6 @@ var map = new ol.Map({
     view: new ol.View({
          maxZoom: 18, minZoom: 6
     })
-    map.getView().setCenter(geolocation.getPosition());
 });
 
 var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
