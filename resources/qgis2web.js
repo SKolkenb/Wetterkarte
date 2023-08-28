@@ -634,8 +634,9 @@ var formatLength = function(line) {
 addInteraction();
 
 
-      var geolocation = new ol.Geolocation({
+var geolocation = new ol.Geolocation({
   projection: map.getView().getProjection()
+  tracking: true
 });
 
 
@@ -659,7 +660,8 @@ positionFeature.setStyle(new ol.style.Style({
 }));
 
 geolocation.on('change:position', function() {
-  var coordinates = geolocation.getPosition();
+    map.getView().setCenter(geolocation.getPosition());
+    var coordinates = geolocation.getPosition();
   positionFeature.setGeometry(coordinates ?
       new ol.geom.Point(coordinates) : null);
 });
