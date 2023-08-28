@@ -102,9 +102,6 @@ var map = new ol.Map({
     view: new ol.View({
          maxZoom: 18, minZoom: 6
     })
-    addLayer(geolocateOverlay);
-    getView().setCenter(geolocation.getPosition());
-    isTracking = true;
 });
 
 var layerSwitcher = new ol.control.LayerSwitcher({tipLabel: "Layers"});
