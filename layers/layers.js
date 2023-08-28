@@ -81,7 +81,7 @@ var lyr_Autowarn_Vorhersage_6 = new ol.layer.Tile({
                                 "TILED": "true",
                                 "VERSION": "1.1.1"},
                             })),
-                            title: "Autimatische Gewittervorhersage",
+                            title: "Automatische Gewittervorhersage",
                             opacity: 0.75,
                             
                             
