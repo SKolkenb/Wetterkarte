@@ -634,8 +634,7 @@ addInteraction();
 
 
 var geolocation = new ol.Geolocation({
-  projection: map.getView().getProjection();
-  tracking: true
+  projection: map.getView().getProjection()
 });
 
 
