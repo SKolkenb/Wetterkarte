@@ -100,7 +100,7 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-         maxZoom: 18, minZoom: 6, zoom: 6
+         maxZoom: 18, minZoom: 6, zoom: 12
     })
 });
 
@@ -700,11 +700,11 @@ map.on("rendercomplete", function(evt) {
         var qgisAttribution = document.createElement('li');
         qgisAttribution.innerHTML = '<a href="https://qgis.org/">QGIS1</a>';
         var versionAttribution = document.createElement('li');
-        qgisAttribution.innerHTML = '<a href="">V1</a>';
+        versionAttribution.innerHTML = '<a href="">V1</a>';
         attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);
         attributionList.insertBefore(olAttribution, firstLayerAttribution);
         attributionList.insertBefore(qgisAttribution, firstLayerAttribution);
-        attributionList.insertBefore(versionAttribution,firstLayerAttribution);
+        attributionList.insertBefore(versionAttribution, firstLayerAttribution);
         attributionComplete = true;
     }
 })
