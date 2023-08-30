@@ -17,11 +17,11 @@ var lyr_WarngebietedesDWDaufKreisbasis_1 = new ol.layer.Tile({
                               url: "https://maps.dwd.de/geoserver/dwd/ows?version%3D1.3%26layers%3Ddwd:Warnungen_Landkreise%26bbox%3D6.15,51.76,14.90,55.01%26width%3D512%26he%0Aight%3D418%26srs%3DEPSG:4326%26CQL_FILTER%3DEC_II%20IN%20('51','%0A52')",
     attributions: ' ',
                               params: {
-                                "LAYERS": "Warngebiete_Kreise",
+                                "LAYERS": "Warngebiete_Gemeinden",
                                 "TILED": "true",
                                 "VERSION": "1.1.1"},
                             })),
-                            title: "Warngebiete des DWD auf Kreisbasis",
+                            title: "Warngebiete des DWD",
                             opacity: 0.5,
                             
                             
@@ -32,11 +32,11 @@ var lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2 = new ol.layer.T
                               url: "https://maps.dwd.de/geoserver/dwd/ows?version%3D1.3%26layers%3Ddwd:Warnungen_Landkreise%26bbox%3D6.15,51.76,14.90,55.01%26width%3D512%26he%0Aight%3D418%26srs%3DEPSG:4326%26CQL_FILTER%3DEC_II%20IN%20('51','%0A52')",
     attributions: ' ',
                               params: {
-                                "LAYERS": "Warnungen_Landkreise",
+                                "LAYERS": "Warnungen_Gemeinden",
                                 "TILED": "true",
                                 "VERSION": "1.1.1"},
                             })),
-                            title: "Wetterwarnungen und Vorabinformationen auf Landkreisebene",
+                            title: "Wetterwarnungen und Vorabinformationen",
                             opacity: 0.75,
                             
                             
