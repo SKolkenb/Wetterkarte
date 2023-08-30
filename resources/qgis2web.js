@@ -100,7 +100,7 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-         maxZoom: 18, minZoom: 6, center: coordinates
+         maxZoom: 18, minZoom: 6
     })
 });
 
@@ -687,6 +687,9 @@ document.getElementsByClassName('gcd-gl-btn')[0].className += ' fa fa-search';
 var attributionComplete = false;
 map.on("rendercomplete", function(evt) {
     if (!attributionComplete) {
+                map.addLayer(geolocateOverlay);
+                map.getView().setCenter(geolocation.getPosition());
+                isTracking = true;
         var attribution = document.getElementsByClassName('ol-attribution')[0];
         var attributionList = attribution.getElementsByTagName('ul')[0];
         var firstLayerAttribution = attributionList.getElementsByTagName('li')[0];
