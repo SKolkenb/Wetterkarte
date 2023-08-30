@@ -691,7 +691,7 @@ map.on("rendercomplete", function(evt) {
     if (!attributionComplete) {
                 map.addLayer(geolocateOverlay);
                 map.getView().setCenter(geolocation.getPosition());
-                map.getView().setZoom(11);
+                map.getView().setZoom(10);
                 isTracking = true;
         
         var attribution = document.getElementsByClassName('ol-attribution')[0];
@@ -704,7 +704,7 @@ map.on("rendercomplete", function(evt) {
         var qgisAttribution = document.createElement('li');
         qgisAttribution.innerHTML = '<a href="https://qgis.org/">QGIS</a>';
         var versionAttribution = document.createElement('li');
-        versionAttribution.innerHTML = '<a href="">V1.2</a>';
+        versionAttribution.innerHTML = '<a href="">V2</a>';
         attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);
         attributionList.insertBefore(olAttribution, firstLayerAttribution);
         attributionList.insertBefore(qgisAttribution, firstLayerAttribution);
