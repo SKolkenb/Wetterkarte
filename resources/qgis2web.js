@@ -100,7 +100,7 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-         maxZoom: 18, minZoom: 6, center: geolocation.getPosition(),
+         maxZoom: 18, minZoom: 6, center: coordinates
     })
 });
 
@@ -636,6 +636,7 @@ addInteraction();
 var geolocation = new ol.Geolocation({
   projection: map.getView().getProjection()
 });
+
 
 
 var accuracyFeature = new ol.Feature();
