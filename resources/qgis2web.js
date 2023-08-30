@@ -702,6 +702,7 @@ map.on("rendercomplete", function(evt) {
         attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);
         attributionList.insertBefore(olAttribution, firstLayerAttribution);
         attributionList.insertBefore(qgisAttribution, firstLayerAttribution);
+        attributionList.insertBefore('V1',firstLayerAttribution);
         attributionComplete = true;
     }
 })
