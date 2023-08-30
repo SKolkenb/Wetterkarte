@@ -700,7 +700,7 @@ map.on("rendercomplete", function(evt) {
         var olAttribution = document.createElement('li');
         olAttribution.innerHTML = '<a href="https://openlayers.org/">OpenLayers</a> &middot; ';
         var qgisAttribution = document.createElement('li');
-        qgisAttribution.innerHTML = '<a href="https://qgis.org/">QGIS1</a>';
+        qgisAttribution.innerHTML = '<a href="https://qgis.org/">QGIS</a>';
         var versionAttribution = document.createElement('li');
         versionAttribution.innerHTML = '<a href="">V1</a>';
         attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);
