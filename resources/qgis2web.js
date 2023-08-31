@@ -703,6 +703,10 @@ map.on("rendercomplete", function(evt) {
     }
 })
 
+let startDate = Date.now();
+const frameRate = 0.5;
+let animationId = null;
+
 function updateInfo() {
     const el = document-getElementById('info');
     el.innerHTML = startDate.toISOString();
