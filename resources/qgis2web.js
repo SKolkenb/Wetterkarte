@@ -675,6 +675,45 @@ var geolocateOverlay = new ol.layer.Vector({
 
 geolocation.setTracking(true);
 
+function updateInfo() {
+    const el = document-getElementById('info');
+    el.innerHTML = startDate.toISOString();
+}
+
+function twoHoursAhead(){
+    return new Date(Math.round(Date.now() /3600000)*3600000+3600000*2);
+}
+
+function setTime() {
+  startDate.setMinutes(startDate.getMinutes() + 10);
+  if (startDate > twoHoursAhead()) {
+    startDate = Date.now();
+  }
+  layers[1].getSource().updateParams({'TIME': startDate.toISOString()});
+  updateInfo();
+}
+setTime();
+
+const stop = function () {
+  if (animationId !== null) {
+    window.clearInterval(animationId);
+    animationId = null;
+  }
+};
+
+const play = function () {
+  stop();
+  animationId = window.setInterval(setTime, 1000 / frameRate);
+};
+
+const startButton = document.getElementById('play');
+startButton.addEventListener('click', play, false);
+
+const stopButton = document.getElementById('pause');
+stopButton.addEventListener('click', stop, false);
+
+updateInfo();
+
 
 var attributionComplete = false;
 map.on("rendercomplete", function(evt) {
