@@ -694,7 +694,7 @@ map.on("rendercomplete", function(evt) {
         var qgisAttribution = document.createElement('li');
         qgisAttribution.innerHTML = '<a href="https://qgis.org/">QGIS</a> &middot; ';
         var versionAttribution = document.createElement('li');
-        versionAttribution.innerHTML = '<a href="">V3.1 beta</a>';
+        versionAttribution.innerHTML = '<a href="">V3.2 beta</a>';
         attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);
         attributionList.insertBefore(olAttribution, firstLayerAttribution);
         attributionList.insertBefore(qgisAttribution, firstLayerAttribution);
@@ -703,7 +703,7 @@ map.on("rendercomplete", function(evt) {
     }
 })
 
-let startDate = Date.now();
+let startDate = new Date();
 const frameRate = 0.5;
 let animationId = null;
 
