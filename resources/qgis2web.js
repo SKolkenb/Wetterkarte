@@ -723,7 +723,7 @@ function setTime() {
   }
     console.log(startDate);
   layersList[4].getSource().updateParams({'TIME': startDate.toISOString()});
-  updateInfo();
+  //updateInfo();
 }
 setTime();
 
@@ -745,4 +745,4 @@ startButton.addEventListener('click', play, false);
 const stopButton = document.getElementById('pause');
 stopButton.addEventListener('click', stop, false);
 
-updateInfo();
+//updateInfo();
