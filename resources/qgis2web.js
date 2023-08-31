@@ -12,6 +12,7 @@ var geolocateControl = (function (Control) {
           } else if (geolocation.getTracking()) {
                 map.addLayer(geolocateOverlay);
                 map.getView().setCenter(geolocation.getPosition());
+                map.getView().setZoom(10);
                 isTracking = true;
           }
         };
