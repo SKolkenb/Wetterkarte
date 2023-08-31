@@ -689,7 +689,7 @@ function setTime() {
   if (startDate > twoHoursAhead()) {
     startDate = Date.now();
   }
-  layers[1].getSource().updateParams({'TIME': startDate.toISOString()});
+  layersList[4].getSource().updateParams({'TIME': startDate.toISOString()});
   updateInfo();
 }
 setTime();
