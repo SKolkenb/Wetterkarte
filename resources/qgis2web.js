@@ -708,7 +708,7 @@ const frameRate = 0.5;
 let animationId = null;
 
 function updateInfo() {
-    const el = document-getElementById('info');
+    const el = document.getElementById('info');
     el.innerHTML = startDate.toISOString();
 }
 
@@ -721,6 +721,7 @@ function setTime() {
   if (startDate > twoHoursAhead()) {
     startDate = Date.now();
   }
+    console.log(startDate);
   layersList[4].getSource().updateParams({'TIME': startDate.toISOString()});
   updateInfo();
 }
