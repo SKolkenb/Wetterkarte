@@ -675,13 +675,41 @@ var geolocateOverlay = new ol.layer.Vector({
 
 geolocation.setTracking(true);
 
+
+var attributionComplete = false;
+map.on("rendercomplete", function(evt) {
+    if (!attributionComplete) {
+                map.addLayer(geolocateOverlay);
+                map.getView().setCenter(geolocation.getPosition());
+                map.getView().setZoom(10);
+                isTracking = true;
+        
+        var attribution = document.getElementsByClassName('ol-attribution')[0];
+        var attributionList = attribution.getElementsByTagName('ul')[0];
+        var firstLayerAttribution = attributionList.getElementsByTagName('li')[0];
+        var qgis2webAttribution = document.createElement('li');
+        qgis2webAttribution.innerHTML = '<a href="https://github.com/tomchadwin/qgis2web">qgis2web</a> &middot; ';
+        var olAttribution = document.createElement('li');
+        olAttribution.innerHTML = '<a href="https://openlayers.org/">OpenLayers</a> &middot; ';
+        var qgisAttribution = document.createElement('li');
+        qgisAttribution.innerHTML = '<a href="https://qgis.org/">QGIS</a> &middot; ';
+        var versionAttribution = document.createElement('li');
+        versionAttribution.innerHTML = '<a href="">V3.1 beta</a>';
+        attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);
+        attributionList.insertBefore(olAttribution, firstLayerAttribution);
+        attributionList.insertBefore(qgisAttribution, firstLayerAttribution);
+        attributionList.insertBefore(versionAttribution, firstLayerAttribution);
+        attributionComplete = true;
+    }
+})
+
 function updateInfo() {
     const el = document-getElementById('info');
     el.innerHTML = startDate.toISOString();
 }
 
 function twoHoursAhead(){
-    return new Date(Math.round(Date.now() /3600000)*3600000+3600000*2);
+    return new Date(Math.round(Date.now()/3600000)*3600000+3600000*2);
 }
 
 function setTime() {
@@ -713,31 +741,3 @@ const stopButton = document.getElementById('pause');
 stopButton.addEventListener('click', stop, false);
 
 updateInfo();
-
-
-var attributionComplete = false;
-map.on("rendercomplete", function(evt) {
-    if (!attributionComplete) {
-                map.addLayer(geolocateOverlay);
-                map.getView().setCenter(geolocation.getPosition());
-                map.getView().setZoom(10);
-                isTracking = true;
-        
-        var attribution = document.getElementsByClassName('ol-attribution')[0];
-        var attributionList = attribution.getElementsByTagName('ul')[0];
-        var firstLayerAttribution = attributionList.getElementsByTagName('li')[0];
-        var qgis2webAttribution = document.createElement('li');
-        qgis2webAttribution.innerHTML = '<a href="https://github.com/tomchadwin/qgis2web">qgis2web</a> &middot; ';
-        var olAttribution = document.createElement('li');
-        olAttribution.innerHTML = '<a href="https://openlayers.org/">OpenLayers</a> &middot; ';
-        var qgisAttribution = document.createElement('li');
-        qgisAttribution.innerHTML = '<a href="https://qgis.org/">QGIS</a> &middot; ';
-        var versionAttribution = document.createElement('li');
-        versionAttribution.innerHTML = '<a href="">V3.1 beta</a>';
-        attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);
-        attributionList.insertBefore(olAttribution, firstLayerAttribution);
-        attributionList.insertBefore(qgisAttribution, firstLayerAttribution);
-        attributionList.insertBefore(versionAttribution, firstLayerAttribution);
-        attributionComplete = true;
-    }
-})
