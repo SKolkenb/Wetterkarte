@@ -52,7 +52,7 @@ var lyr_Niederschlagsradar_3 = new ol.layer.Tile({
                                 "VERSION": "1.1.1"},
                             })),
                             title: "Niederschlagsradar",
-                            opacity: 1.000000,
+                            opacity: 0.750,
                             
                             
                           });
