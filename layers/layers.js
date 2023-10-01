@@ -91,7 +91,7 @@ var lyr_Autowarn_Vorhersage_6 = new ol.layer.Tile({
 lyr_GoogleMaps_0.setVisible(true);lyr_WarngebietedesDWDaufKreisbasis_1.setVisible(false);lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2.setVisible(true);lyr_Niederschlagsradar_3.setVisible(true);lyr_Autowarn_Analyse_5.setVisible(true);lyr_Autowarn_Vorhersage_6.setVisible(true);
 var layersList = [lyr_GoogleMaps_0,lyr_WarngebietedesDWDaufKreisbasis_1,lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2,lyr_Niederschlagsradar_3,lyr_Autowarn_Analyse_5,lyr_Autowarn_Vorhersage_6];
 setInterval(function() {
-        lyr_Niederschlagsradar_3.setVisible(false);
-        lyr_Niederschlagsradar_3.setVisible(true);
+        var params = lyr_Niederschlagsradar_3.getSource().getParams();
+        lyr_Niederschlagsradar_3.getSource().updateParams(params);
         console.log ("Aktualisiert");
 }, 30000);
