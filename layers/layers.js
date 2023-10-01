@@ -2,7 +2,7 @@ var wms_layers = [];
 
 
         var lyr_GoogleMaps_0 = new ol.layer.Tile({
-            'title': 'Hintergrundkarte',
+            'title': 'OpenStreetMap',
             'type': 'base',
             'opacity': 1.000000,
             
@@ -10,6 +10,17 @@ var wms_layers = [];
             source: new ol.source.XYZ({
     attributions: ' ',
                 url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+            })
+        });
+        var lyr_EDP_0 = new ol.layer.Tile({
+            'title': 'EDP-Map',
+            'type': 'base',
+            'opacity': 1.000000,
+            
+            
+            source: new ol.source.XYZ({
+    attributions: ' ',
+                url: 'https://map.eifert-systems.org/{z}/{x}/{y}.png'
             })
         });
 var lyr_WarngebietedesDWDaufKreisbasis_1 = new ol.layer.Tile({
@@ -89,4 +100,8 @@ var lyr_Autowarn_Vorhersage_6 = new ol.layer.Tile({
               wms_layers.push([lyr_Autowarn_Vorhersage_6, 1]);
 
 lyr_GoogleMaps_0.setVisible(true);lyr_WarngebietedesDWDaufKreisbasis_1.setVisible(false);lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2.setVisible(true);lyr_Niederschlagsradar_3.setVisible(true);lyr_Autowarn_Analyse_5.setVisible(true);lyr_Autowarn_Vorhersage_6.setVisible(true);
-var layersList = [lyr_GoogleMaps_0,lyr_WarngebietedesDWDaufKreisbasis_1,lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2,lyr_Niederschlagsradar_3,lyr_Autowarn_Analyse_5,lyr_Autowarn_Vorhersage_6];
+var layersList = [lyr_GoogleMaps_0,lyr_EDP_0,lyr_WarngebietedesDWDaufKreisbasis_1,lyr_WetterwarnungenundVorabinformationenaufLandkreisebene_2,lyr_Niederschlagsradar_3,lyr_Autowarn_Analyse_5,lyr_Autowarn_Vorhersage_6];
+setInterval(function() {
+        lyr_Niederschlagsradar_3.setVisible(false);
+        lyr_Niederschlagsradar_3.setVisible(true);
+}, 30000);
