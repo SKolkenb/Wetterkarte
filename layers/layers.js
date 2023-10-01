@@ -104,4 +104,5 @@ var layersList = [lyr_GoogleMaps_0,lyr_EDP_0,lyr_WarngebietedesDWDaufKreisbasis_
 setInterval(function() {
         lyr_Niederschlagsradar_3.setVisible(false);
         lyr_Niederschlagsradar_3.setVisible(true);
+        console.log ("Aktualisiert");
 }, 30000);
