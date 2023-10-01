@@ -94,4 +94,5 @@ setInterval(function() {
         var params = lyr_Niederschlagsradar_3.getSource().getParams();
         lyr_Niederschlagsradar_3.getSource().updateParams(params);
         console.log ("Aktualisiert");
-}, 30000);
+        wms_layers.toString();
+}, 10000);
