@@ -94,5 +94,5 @@ setInterval(function() {
         var params = wms_layers[3].getSource().getParams();
         wms_layers[3].getSource().updateParams(params);
         console.log ("Aktualisiert");
-        console.log(params);
+        console.log(layersList.toString(););
 }, 10000);
